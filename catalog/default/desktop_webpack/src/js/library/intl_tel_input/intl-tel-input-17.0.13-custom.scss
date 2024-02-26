@@ -1,0 +1,20 @@
+/*!
+ * International Telephone Input v17.0.13
+ * https://github.com/jackocnr/intl-tel-input.git
+ * Licensed under the MIT license
+ */
+
+$flagsImagePath: '~intl-tel-input/build/img/';
+
+@import '~intl-tel-input/src/css/intlTelInput';
+
+.iti__flag {
+    background-image: url("#{$flagsImagePath}/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("#{$flagsImagePath}/flags@2x.png");
+    }
+}

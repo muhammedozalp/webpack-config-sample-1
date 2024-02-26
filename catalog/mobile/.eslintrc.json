@@ -1,0 +1,79 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    // "plugins": ["sonarjs"],
+    "extends": [
+        "airbnb-base"
+        // "plugin:sonarjs/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always",
+                "mjs": "never",
+                "jsx": "never"
+            }
+        ],
+        "import/no-extraneous-dependencies": 0,
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": [ "error", { "ignore": [
+            "Root/", 
+            "Components/",
+            "Library/",
+            "Template/",
+            "Layout/",
+            "Util/"
+        ] } ],
+        "object-curly-newline": "off",
+        "indent": [
+            "error",
+            4
+        ],
+        "linebreak-style": [
+            "off"
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "comma-dangle": [
+            "off",
+            {
+                "arrays": "never",
+                "objects": "never",
+                "imports": "never",
+                "exports": "never",
+                "functions": "never"
+            }
+        ]
+    },
+    "globals": {
+        "$": "readonly",
+        "jQuery": "readonly",
+        "trans": "readonly",
+        "generalTrans": "readonly",
+        "preG": "readonly",
+        "__webpack_public_path__": "writable",
+        "DEVELOPMENT": "readonly",
+        "ISLIVE": "readonly",
+        "Sentry": "writable",
+        "addToCart": "readonly",
+        "Masterpass": "readonly"
+    }
+}
+// eslint JSON file allows javascript style comments
+
+// "preG": "readonly", // holds variables/data coming from PHP
+// "__webpack_public_path__": "writable", // using for dynamic import
+// "DEVELOPMENT": "readonly" // true/false => using for only development purpose code blocks

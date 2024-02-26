@@ -1,0 +1,28 @@
+{
+  "name": "sample_workspaces",
+  "version": "2.0.0",
+  "private": true,
+  "workspaces": [
+    "catalog/view/theme/default/desktop_webpack",
+    "catalog/view/theme/mobile"
+  ],
+  "scripts": {
+    "build-all": "npm-run-all desktop-prod mobile-prod",
+    "build-dev": "npm-run-all desktop-dev mobile-dev",
+    "desktop-dev": "yarn workspace @sample_workspaces/desktop_webpack desktop-dev",
+    "desktop-prod": "yarn workspace @sample_workspaces/desktop_webpack desktop-prod",
+    "desktop-dev-watch": "yarn workspace @sample_workspaces/desktop_webpack desktop-dev-watch",
+    "desktop-prod-watch": "yarn workspace @sample_workspaces/desktop_webpack desktop-prod-watch",
+    "mobile-dev": "yarn workspace @sample_workspaces/mobile mobile-dev",
+    "mobile-prod": "yarn workspace @sample_workspaces/mobile mobile-prod",
+    "mobile-dev-watch": "yarn workspace @sample_workspaces/mobile mobile-dev-watch",
+    "mobile-prod-watch": "yarn workspace @sample_workspaces/mobile mobile-prod-watch",
+    "mobile-test-eslint": "yarn workspace @sample_workspaces/mobile mobile-test-eslint"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  },
+  "dependencies": {
+    "chart.js": "3.8.0"
+  }
+}

@@ -1,0 +1,5 @@
+* Followings are dynamically created dirs
+/bundle_analysis
+/jsdocs/docs
+/node_modules
+/src/crossbrowser_tag_display_testing

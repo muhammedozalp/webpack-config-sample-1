@@ -1,0 +1,90 @@
+{
+    "name": "@sample_workspaces/desktop_webpack",
+    "version": "2.0.0",
+    "description": "Front-end developments of sample via webpack",
+    "homepage": "https://gitlab.sample.com/sample/",
+    "bugs": "https://sentry.sample.com/organizations/sample-dev/issues/?project=2",
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.sample.com/sample/-/i4894/wp5-cdn-sass"
+    },
+    "private": true,
+    "sideEffects": false,
+    "scripts": {
+        "desktop-dev": "node ./config/compile.build.js --mode development --env no_debug --env no_report",
+        "desktop-dev-watch": "node ./config/compile.watch.js --mode development --env no_debug --env no_report isWatching",
+        "desktop-prod": "node ./config/compile.build.js --mode production --env no_debug --env no_report",
+        "desktop-prod-watch": "node ./config/compile.watch.js --mode production --env no_debug --env no_report isWatching",
+        "section_debug": "___________________________________________________________________________________________________",
+        "desktop-dev-debug": "node ./config/compile.build.js --mode development --env has_debug --env has_report",
+        "desktop-prod-debug": "node ./config/compile.build.js --mode production --env has_debug --env has_report",
+        "desktop-prod-debug-stats": "node ./config/compile.build.js --mode production --env has_debug --env has_report --profile --json ./bundle_analysis/stats.json",
+        "desktop-whybundled": "whybundled ./bundle_analysis/stats.json",
+        "desktop-whybundledby": "whybundled by ./bundle_analysis/stats.json",
+        "section_doc_and_test": "____________________________________________________________________________________________",
+        "desktop-doc": "rm -rf ./jsdocs/docs && jsdoc -c jsdoc.json",
+        "desktop-test-eslint": "eslint src/**/*.js config/**/*.js",
+        "desktop-test-stylelint": "stylelint src/scss/stylesheet/**/*.{css,scss}",
+        "desktop-test-webpackconfig": "webpack configtest ./config/webpack.config.js"
+    },
+    "dependencies": {
+        "element-closest-polyfill": "1.0.4",
+        "intl-tel-input": "17.0.13",
+        "process": "0.11.10",
+        "raven-js": "3.27.2",
+        "sweetalert2": "9.17.2",
+        "ua-parser-js": "0.7.28",
+        "whatwg-fetch": "3.6.2"
+    },
+    "devDependencies": {
+        "@babel/core": "7.15.8",
+        "@babel/preset-env": "7.15.8",
+        "apidoc": "0.28.1",
+        "babel-loader": "8.2.3",
+        "chalk": "4.1.2",
+        "connect": "3.7.0",
+        "copy-webpack-plugin": "9.0.1",
+        "core-js": "3.19.0",
+        "css-loader": "5.2.7",
+        "css-minimizer-webpack-plugin": "3.1.1",
+        "dotenv-webpack": "7.0.3",
+        "eslint": "7.32.0",
+        "eslint-config-airbnb-base": "14.2.1",
+        "eslint-plugin-import": "2.25.2",
+        "expose-loader": "3.1.0",
+        "file-loader": "6.2.0",
+        "filemanager-webpack-plugin": "6.1.7",
+        "jsdoc": "3.6.7",
+        "mini-css-extract-plugin": "2.4.3",
+        "postcss": "8.3.11",
+        "postcss-loader": "6.2.0",
+        "postcss-preset-env": "6.7.0",
+        "regenerator-runtime": "0.13.9",
+        "sass": "1.43.4",
+        "sass-loader": "12.3.0",
+        "serve-static": "1.14.2",
+        "stylelint": "14.0.1",
+        "stylelint-config-standard-scss": "2.0.0",
+        "stylelint-scss": "4.0.0",
+        "webpack": "5.60.0",
+        "webpack-bundle-analyzer": "4.5.0",
+        "webpack-cli": "4.9.1",
+        "webpack-manifest-plugin": "4.0.2",
+        "whybundled": "2.0.0"
+    },
+    "browserslist": {
+        "legacyBrowsers": [
+            "Chrome 49",
+            "Firefox 45",
+            "Safari 10",
+            "ie 11",
+            "ios_saf 10.3"
+        ],
+        "modernBrowsers": [
+            "Chrome 85",
+            "Firefox 87",
+            "Safari 14",
+            "ios_saf 12"
+        ]
+    }
+}
